@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Animal Profile</title>
+</head>
+<body>
+  <center><br><br>
+    <fieldset><br><br>
+      <legend>Time To Make Some Changes</legend>
+      <% if(typeof(errors) != 'undefined' ) { %>
+           <% for (var x in errors) { %>
+            <h3><%= errors[x].message %></h3>
+           <% } %>
+       <% } %>
+      <form action="/lions/<%= whatever._id %>" method="post">
+        Animal: <input type="text" name="name" value="<%= whatever.name%>"><br>
+          <br>
+        Location: <input type="text" name="location" value="<%= whatever.location%>"><br>
+        <br>
+        <button type="submit"> Submit </button> <br>
+        <br>
+      </form>
+      <a href="/"><button>Animals</button></a>
+    </fieldset>
+  </center>
+</body>
+</html>

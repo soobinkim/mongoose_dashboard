@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animal</title>
+</head>
+<body>
+  <center><br><br>
+    <fieldset><br><br>
+      <legend> What kind of animal do you want to create?</legend>
+      <% if(typeof(errors) != 'undefined' ) { %>
+           <% for (var x in errors) { %>
+            <h3><%= errors[x].message %></h3>
+           <% } %>
+       <% } %>
+      <form action="/lions" method="post">
+        Animal: <input type="text" name="name"><br>
+          <br>
+        Location: <input type="text" name="location"><br>
+        <br>
+        <button type="submit"> Submit </button> <br>
+        <br>
+      </form>
+      <a href="/"><button>Animals</button></a>
+    </fieldset>
+  </center>
+</body>
+</html>

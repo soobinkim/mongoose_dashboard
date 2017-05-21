@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animal Dashboard</title>
+</head>
+<body>
+  <center>
+    <fieldset>
+      <legend>Animal Squad</legend>
+  <br>
+  <% for(var i = 0; i < animals.length; i++){ %>
+    <br>
+    <p> Name: <%= animals[i].name %> | Location: <%= animals[i].location %></p>
+    <p> <a href="/lions/<%=animals[i]._id%>"> View Profile</a> </p>
+    <p><form action="/lions/destroy/<%=animals[i]._id%>" method="post"><button type="submit">Delete</button></form></p>
+    <br>
+    <hr><br>
+    <br>
+  <% } %>
+  <!-- have access to have animals in the for loop but not outside of it animals gives me back all the objects of animals -->
+  <a href="/lions/new"><button>Create New Animal</button></a>
+  </fieldset>
+</center>
+</body>
+</html>

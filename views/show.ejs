@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <fieldset>
+    <legend> Viewing <%= animals.name %>'s Profile </legend>
+        <table style="width:100%">
+          <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th colspan="2">Edit</th>
+          </tr>
+          <tr style="text-align: center">
+              <td><%= animals.name %></td>
+              <td><%= animals.location %></td>
+              <td><small><a href="/lions/edit/<%=animals._id%>">Edit Me</a></small><td>
+          </tr>
+        </table>
+  </fieldset>
+
+</body>
+</html>
